@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Voz de Manaure 92.3 FM</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://disenoswebpr.com/wp-content/uploads/2023/06/Como-Funciona-La-Radio-Online-Disenos-Web.webp ') repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .logo {
+      width: auto;
+      height: 100px;
+      margin-bottom: 30px;
+    }
+
+    .play-button {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.3s ease;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    .slider-container {
+      overflow: hidden;
+      width: 400px;
+      height: 300px;
+      margin-top: 40px;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .slide img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .slide p {
+      font-size: 1rem;
+      color: #ccc;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .control-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>La Voz de Manaure 92.3 FM</h1>
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiDZNDgvEaCsC130e9sysRoAnEok_aLmPWvP5xNXIzzhSJhQVnIl38QLflRgPGCWay5hHFgdUhQw5g6tOdB6maWJMCobEomekzaXmLmwj89IzVlTNbjmX2Nshe9ePDu21ff-AnOdB2dn-iYSyeVsAx95m1-l6cE5mYf3lq-bTN4CeePBoTVfVfvG66hR50=s400 " alt="Logo de la emisora" class="logo">
+
+    <button class="play-button" id="playButton">
+      <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </button>
+
+    <!-- Reproductor de audio en streaming -->
+    <audio id="radioPlayer" src="https://stream.zeno.fm/uy5sh8ohaxivv.mp3 "></audio>
+
+    <!-- Slider de imágenes -->
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <div class="slide">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlBYz_Lh7_QQArm69dsj7-c85mIVPz6DX9-cExwo1syPRFo-TkYNVTRNbfSYZUmMDAsk3DBMeMkSfSD_ecP-0brUZgSGV9ToIrUbqGB9kMR0BtbPHiKZtKK-AnzmkGDoIhrRRnVn76fF1fhey_MIVU8-B65uZQP9RjnOJo13hjrq7yCJEhsDRh8fQ14Kw/w640-h360/Entretenimiento.png" alt="Imagen 1">
+          <p>Entretenimiento José Films</p>
+        </div>
+        <div class="slide">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tKVPFqxObvhsqBq1fpZmM1B03lrQbjQ-mQ3uPBqguS6dWfQLcPwgYAhdZDJiFzCIduySgIjJalzkUOmrH7R3BOJcfAXhoHkUGmQu_ZyCRV3nGVxF3LD4-jHnJ4WCF2AAzdjmUAGOJIt1NcfPkiLiaclgBNyxOHTdGHHKnQ84Te-nm_iFw_i8265LJM8/w640-h360/robin%20flayer.jpg" alt="Imagen 2">
+          <p>Carnicería Robin</p>
+        </div>
+        <div class="slide">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEii0HX6FdcUCd31isa0DGbu6G0YysA_miLCr0Dhpzie7b1ARM49f7CeSFfDODru_ItKJTKEjDJOeSNO1J0L7mEEA5i5gxlaJpRSeJGhH3n8_DW2n9HSUHgvebmqL8v3deUsV4Abye-3JNcfdThF5OMoRWHTzz9ATqz3QW0_v822r5JRL-vuzzQDa0XDKwM/s16000/internet.png" alt="Imagen 3">
+          <p>Internet Plus</p>
+        </div>
+        <div class="slide">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsk3uE_qdMoVZfJoG6LNp3Ykr3zWOC2sJ6sOsne0plzMk1h6HUyI5nkf3N-ICzP-0enT3SFS1hWdUbHbdjtzrGKMcYpfrbTd2id7dBNi20NbfGBLhhw1LMeIqSOcPSriS0KZPoeOgiEM8QkWSKLJ0z5YJ82_DKhT4wpMZxFdLyvL5MS_SLTLYjQ5ob9DQ/w640-h360/1000170417.png" alt="Imagen 4">
+          <p>Todo pinturas Gerardo</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="prev">&#10094;</button>
+        <button class="control-btn" id="next">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const playButton = document.getElementById('playButton');
+    const audioPlayer = document.getElementById('radioPlayer');
+
+    // Función para cambiar el icono según el estado
+    function updatePlayIcon(isPlaying) {
+      if (isPlaying) {
+        playButton.innerHTML = `
+          <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="5" width="4" height="14" rx="1" />
+            <rect x="14" y="5" width="4" height="14" rx="1" />
+          </svg>
+        `;
+      } else {
+        playButton.innerHTML = `
+          <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        `;
+      }
+    }
+
+    // Inicializar icono de Play
+    updatePlayIcon(false);
+
+    // Botón Play
+    playButton.addEventListener('click', () => {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        updatePlayIcon(true);
+      } else {
+        audioPlayer.pause();
+        updatePlayIcon(false);
+      }
+    });
+
+    // Slider automático
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const offset = -index * 100;
+      document.getElementById('slider').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+
+    // Control manual
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+  </script>
+
+</body>
+</html>
