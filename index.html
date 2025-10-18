@@ -2,77 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Radio Educativa</title>
+  <title>Radio Mundial 860AM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
+      background: #111;
+      color: #fff;
+      font-family: 'Courier New', monospace;
       text-align: center;
+      padding: 30px;
     }
-
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px 0;
-      font-size: 2em;
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slides {
-      display: flex;
-      width: 300%;
-      animation: slide 9s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      height: auto;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0%); }
-      33% { transform: translateX(-100%); }
-      66% { transform: translateX(-200%); }
-      100% { transform: translateX(0%); }
-    }
-
-    .audio-player {
-      margin: 30px auto;
-    }
-
     audio {
-      width: 80%;
-      max-width: 600px;
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+    }
+    .mensaje {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .banner {
+      width: 100%;
+      max-width: 512px;
+      margin: 20px auto;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-
-  <header>📻 Radio Educativa</header>
-
-  <div class="slider">
-    <div class="slides">
-      <img src="https://via.placeholder.com/800x300?text=Educación+Sonora" alt="Banner 1">
-      <img src="https://via.placeholder.com/800x300?text=Historia+Musical" alt="Banner 2">
-      <img src="https://via.placeholder.com/800x300?text=Voces+Latinoamericanas" alt="Banner 3">
-    </div>
-  </div>
-
-  <div class="audio-player">
-    <audio controls>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </div>
-
+  <h1>📻 Señal viva desde Santa Ana del Táchira</h1>
+  <img src="https://mundial860.radio12345.com/banner_images/2915323/98/16/512454952590filebaner.jpg" alt="Banner radial" class="banner">
+  <audio controls autoplay>
+    <source src="https://uk24freenew.listen2myradio.com/live.mp3?typeportmount=s1_23081_stream_335126030" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  <div class="mensaje">Remix campesino con sabor local. Transmitiendo en vivo desde el corazón del Táchira.</div>
 </body>
 </html>
